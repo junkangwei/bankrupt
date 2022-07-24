@@ -6,6 +6,8 @@ https://www.processon.com/diagraming/5f4c550af346fb2e295ca51a
 
 
 ###通信模块netty,已经弄成单独包(已完成)
+
+
 remote
 - server(已完成)
 - client(已完成)
@@ -14,6 +16,8 @@ remote
 
 消息格式如图
 ![img_1.png](img_1.png)
+
+
 ###broker
 - 1 start (已完成)
 - 2 topic 创建(已完成) 同步(已完成) 删除(还没写)
