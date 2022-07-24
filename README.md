@@ -1,11 +1,14 @@
 ###Bankrupt MQ
 一个基于rocketmq自己的实现简易破产版MQ
+
 部分图片地址
 https://www.processon.com/diagraming/5f4c550af346fb2e295ca51a
-###通信模块(已完成)
+
+
+###通信模块netty,已经弄成单独包(已完成)
 remote
-- server
-- client
+- server(已完成)
+- client(已完成)
 
 ~序列化方式暂时只支持JSON,到时候写完扩展
 
