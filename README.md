@@ -2,8 +2,7 @@
 一个基于rocketmq自己的实现简易破产版MQ
 
 部分图片地址
-https://www.processon.com/diagraming/5f4c550af346fb2e295ca51a
-
+http://processon.com/chart_image/5f4c550af346fb2e295ca51d.png
 
 ###通信模块netty,已经弄成单独包(已完成)
 
