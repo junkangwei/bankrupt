@@ -124,6 +124,7 @@ public class ConsumeQueue {
             }
             processOffset += mappedFileOffset;
             mappedFile.setWrotePosition((int) processOffset % cqSize);
+            mappedFile.setFlushPosition((int) processOffset % cqSize);
         }
         return count;
     }

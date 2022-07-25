@@ -125,6 +125,7 @@ public class DefaultMessageStore implements MessageStore{
     public void shutDown() {
         this.reputMessageService.shutdown();
         this.delayMessageService.close();
+        commitLog.flush();
     }
 
     @Override

@@ -32,6 +32,8 @@ public class MappedFile {
     private String fileName;
     private long fileFromOffset;
     private File file;
+    //刷盘的进度
+    private AtomicInteger flushPosition = new AtomicInteger(0);
 
     //mmap
     protected FileChannel fileChannel;
@@ -226,5 +228,17 @@ public class MappedFile {
         if(this.mappedByteBuffer != null){
             this.mappedByteBuffer.force();
         }
+    }
+
+    public int getFlushPosition() {
+        return flushPosition.get();
+    }
+
+    public void setFlushPosition(int flushPosition) {
+        this.flushPosition.set(flushPosition);
+    }
+
+    public boolean needFlush() {
+        return this.flushPosition.get() < this.wrotePosition.get();
     }
 }

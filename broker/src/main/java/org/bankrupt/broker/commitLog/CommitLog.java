@@ -272,7 +272,13 @@ public class CommitLog {
 
     public void flush() {
         for (MappedFile mappedFile : this.mappedFileQueue.getMappedFiles()) {
-            mappedFile.flush();
+            //判断一下
+            if(mappedFile != null){
+                //判断刷盘点和提交点
+                if(mappedFile.needFlush()){
+                    mappedFile.flush();
+                }
+            }
         }
     }
 }
